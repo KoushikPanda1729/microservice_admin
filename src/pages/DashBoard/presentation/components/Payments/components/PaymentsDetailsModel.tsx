@@ -48,7 +48,7 @@ export const PaymentDetailsModal: React.FC<PaymentDetailsModalProps> = ({
             </div>
             <div>
               <h4 className="font-semibold mb-3">Payment Information</h4>
-              <div className='space-y-2 text-sm'>
+              <div className="space-y-2 text-sm">
                 <p>
                   <strong>Payment Date:</strong>{" "}
                   {new Date(payment.date).toLocaleString()}
