@@ -23,12 +23,12 @@ const CustomInput = forwardRef<HTMLInputElement, CustomInputProps>(
     const [showPassword, setShowPassword] = useState(false);
 
     const baseInputClasses =
-      "px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-sm sm:text-base";
+      "px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all text-sm sm:text-base";
     const errorClasses = error ? "border-red-500 focus:ring-red-500" : "";
     const widthClasses = fullWidth ? "w-full" : "";
     const hasLeftIcon = leftIcon ? "pl-10 sm:pl-11" : "";
     const hasRightIcon =
-      rightIcon || showPasswordToggle ? "pr-10 sm:pr-11" : "";
+      rightIcon || showPasswordToggle ? "pr-10 sm:pr-11 " : "";
 
     const inputType = showPasswordToggle
       ? showPassword
@@ -67,7 +67,7 @@ const CustomInput = forwardRef<HTMLInputElement, CustomInputProps>(
 
         <div className="relative">
           {leftIcon && (
-            <div className="absolute left-3 sm:left-3.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none flex items-center justify-center w-5 h-5">
+            <div className="absolute left-3 sm:left-3.5 top-1/2 -translate-y-1/2 text-primary-500 pointer-events-none flex items-center justify-center w-5 h-5">
               {leftIcon}
             </div>
           )}
@@ -83,7 +83,7 @@ const CustomInput = forwardRef<HTMLInputElement, CustomInputProps>(
             <div
               className={`absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 flex items-center justify-center ${
                 isRightIconClickable
-                  ? `cursor-pointer hover:text-gray-600 ${rightIconClassName}`
+                  ? `cursor-pointer text-primary-500 hover:text-primary-500 ${rightIconClassName}`
                   : "pointer-events-none"
               }`}
               onClick={isRightIconClickable ? handleRightIconClick : undefined}

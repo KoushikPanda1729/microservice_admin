@@ -1,6 +1,5 @@
 import { forwardRef } from "react";
 import type { ButtonProps } from "./Button.types";
-import { AppColors } from "@/commons/constants/appColors";
 
 const CustomButton = forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -31,14 +30,14 @@ const CustomButton = forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     const variantClasses = {
-      primary: `bg-[${AppColors.primary}] hover:bg-[${AppColors.buttonHover}]  active:bg-blue-800 text-white shadow-sm`,
+      primary: `bg-primary-500 hover:bg-primary-400  active:bg-primary-600 text-white shadow-sm`,
       secondary:
         "bg-slate-700 hover:bg-slate-800 active:bg-slate-900 text-white shadow-sm",
       outline:
         "bg-white hover:bg-gray-50 active:bg-gray-100 text-slate-700 border border-slate-300 shadow-sm",
       ghost:
         "bg-transparent hover:bg-gray-100 active:bg-gray-200 text-slate-700",
-      link: "bg-transparent text-indigo-600 hover:text-indigo-800 hover:underline shadow-none p-0 font-medium text-sm",
+      link: "bg-transparent text-primary-500 hover:text-primary-400 hover:underline shadow-none p-0 font-medium text-sm",
       danger:
         "bg-red-500 hover:bg-red-600 active:bg-red-700 text-white shadow-sm",
       success:

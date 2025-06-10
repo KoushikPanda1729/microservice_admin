@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { useNavigate, useSearchParams } from "react-router-dom";
 import type { RootState } from "@/app/store/store";
-import { Eye, EyeOff, Phone, Lock, Settings } from "lucide-react";
-import { useLoginPageViewModel } from "../../page.di";
 import CustomButton from "@/commons/components/Button";
 import CustomInput from "@/commons/components/Input/CustomInput";
 import CustomCheckbox from "@/commons/components/checkbox/CustomCheckbox";
-import DashboardPreview from "../DashBoardPreview/DashBoardPreview";
+import { AppImages } from "@/commons/constants/appImages";
 import { useAuth } from "@/commons/hooks/useAuth";
+import { Eye, EyeOff, Lock, Phone } from "lucide-react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useLoginPageViewModel } from "../../page.di";
+import DashboardPreview from "../DashBoardPreview/DashBoardPreview";
 
 const LoginComponent = () => {
   const viewModel = useLoginPageViewModel();
@@ -38,25 +39,22 @@ const LoginComponent = () => {
       </div>
 
       <div className="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8">
-        <div className="w-full max-w-md border border-gray-200 p-[20px] md:p-[40px] shadow-lg">
+        <div className="w-full max-w-xl border border-gray-200 p-[20px] md:p-[40px] shadow-lg">
           <div className="flex items-center mb-8 lg:mb-12">
             <div className="flex items-center space-x-2">
-              <div className="bg-blue-600 p-2 rounded-lg">
-                <Settings className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-lg sm:text-xl font-bold text-gray-900">
-                Sparto
+              <img src={AppImages.logo} alt="Sparto Logo" className="h-6 w-6" />
+              <span className="text-lg sm:text-xl font-bold text-primary-500">
+                Snack
               </span>
             </div>
           </div>
 
           <div className="mb-6 lg:mb-8">
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-              Welcome Back
+            <h1 className="text-2xl sm:text-3xl font-bold text-primary-500 mb-2">
+              Welcome
             </h1>
             <p className="text-sm sm:text-base text-gray-600">
-              Enter your phone number and password to access your car parts
-              inventory.
+              Enter your phone number and password to access your account.
             </p>
           </div>
 
@@ -141,7 +139,7 @@ const LoginComponent = () => {
 
           <div className="mt-8 text-center">
             <p className="text-xs sm:text-sm text-gray-400">
-              Copyright © 2025 Sparto Car Parts.
+              Copyright © 2025 Snack.
             </p>
           </div>
         </div>
