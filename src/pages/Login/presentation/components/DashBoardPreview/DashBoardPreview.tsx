@@ -6,7 +6,7 @@ const DashboardPreview = () => {
     <div className="w-full h-full">
       <img
         src={AppImages.loginBanner}
-        alt="Dashboard Preview"
+        alt="Dashboard"
         className="w-full h-full object-cover shadow-lg"
       />
     </div>
