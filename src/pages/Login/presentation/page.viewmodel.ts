@@ -1,6 +1,6 @@
 import {
   setLoading,
-  setPhone,
+  setGmail,
   setPassword,
   setRememberMe,
   setError,
@@ -24,8 +24,8 @@ export class LoginPageViewModel {
 
   initialize() {}
 
-  updatePhone(value: string) {
-    this.dispatch(setPhone(value));
+  updateGmail(value: string) {
+    this.dispatch(setGmail(value));
   }
 
   updatePassword(value: string) {
@@ -36,8 +36,8 @@ export class LoginPageViewModel {
     this.dispatch(setRememberMe(value));
   }
 
-  get phone() {
-    return this.getState().LoginPageReducerSlice.phone;
+  get gmail() {
+    return this.getState().LoginPageReducerSlice.gmail;
   }
 
   get password() {
@@ -56,7 +56,7 @@ export class LoginPageViewModel {
     redirectPath: string,
     navigate: (to: string, options?: Record<string, unknown>) => void
   ) {
-    if (!this.phone) {
+    if (!this.gmail) {
       this.dispatch(setError("Phone number is required"));
       return;
     }
@@ -68,7 +68,7 @@ export class LoginPageViewModel {
 
     try {
       this.dispatch(setLoading(true));
-      await this.loginUserUseCase.execute(this.phone, this.password);
+      await this.loginUserUseCase.execute(this.gmail, this.password);
       navigate(redirectPath, { replace: true });
     } catch {
       this.dispatch(setError("Invalid credentials. Please try again."));

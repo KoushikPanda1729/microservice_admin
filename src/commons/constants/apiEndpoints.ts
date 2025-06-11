@@ -5,7 +5,7 @@ export interface ApiEndpoint {
 
 export const ApiEndpoints: Record<string, ApiEndpoint> = {
   login: {
-    path: "users/login",
+    path: "auth/login",
     requiresAuth: false,
   },
   allUsers: {

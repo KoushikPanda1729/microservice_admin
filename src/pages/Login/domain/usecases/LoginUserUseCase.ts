@@ -8,7 +8,7 @@ export class LoginUserUseCase {
     this.repository = repository;
   }
 
-  async execute(phone: string, password: string): Promise<LoginEntity> {
-    return await this.repository.loginUser(phone, password);
+  async execute(gmail: string, password: string): Promise<LoginEntity> {
+    return await this.repository.loginUser(gmail, password);
   }
 }

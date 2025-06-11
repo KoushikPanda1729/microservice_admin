@@ -3,7 +3,7 @@ import type { PageState } from "./page.state";
 
 const initialState: PageState = {
   isLoading: false,
-  phone: "",
+  gmail: "",
   password: "",
   rememberMe: false,
   error: "",
@@ -16,8 +16,8 @@ const pageSlice = createSlice({
     setLoading(state, action: PayloadAction<boolean>) {
       state.isLoading = action.payload;
     },
-    setPhone(state, action: PayloadAction<string>) {
-      state.phone = action.payload;
+    setGmail(state, action: PayloadAction<string>) {
+      state.gmail = action.payload;
       state.error = "";
     },
     setPassword(state, action: PayloadAction<string>) {
@@ -33,7 +33,7 @@ const pageSlice = createSlice({
   },
 });
 
-export const { setLoading, setPhone, setPassword, setRememberMe, setError } =
+export const { setLoading, setGmail, setPassword, setRememberMe, setError } =
   pageSlice.actions;
 
 export const LoginPageReducer = pageSlice.reducer;

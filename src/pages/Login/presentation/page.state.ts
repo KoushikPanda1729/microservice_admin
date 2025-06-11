@@ -1,6 +1,6 @@
 export interface PageState {
   isLoading: boolean;
-  phone: string;
+  gmail: string;
   password: string;
   rememberMe: boolean;
   error: string;

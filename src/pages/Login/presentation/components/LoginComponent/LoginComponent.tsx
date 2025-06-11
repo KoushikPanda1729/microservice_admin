@@ -70,8 +70,8 @@ const LoginComponent = () => {
               id="phone"
               type="text"
               label="Phone Number"
-              value={viewModel.phone}
-              onChange={(e) => viewModel.updatePhone(e.target.value)}
+              value={viewModel.gmail}
+              onChange={(e) => viewModel.updateGmail(e.target.value)}
               placeholder="Enter your phone number"
               required
             />

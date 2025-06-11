@@ -1,4 +1,4 @@
 export interface LoginUserDTO {
-  phone: string;
+  gmail: string;
   password: string;
 }
